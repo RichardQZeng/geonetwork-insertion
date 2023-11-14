@@ -20,6 +20,9 @@ The aim of this project is to :
 ├── params
 │   └── datasets.csv # the csv file containing all the Metadata
 ├── xml_generated # Directory containing the ISO19115 files
+    ├── An_annotated_Avian_Influenza_dataset_from_two_event-based_surveillance_systems.xml
+    ├── Annotated_datasets_from_PADI-web_for_event-based_surveillance_of_Avian_Influenza,_African_Swine_Fever,_and_West-Nile_Virus_Disease.xml
+    ├── [...]
 ├── logs # Directory containing all the errors and warning output from the csv file parsing
 │   ├── csv_error_20231114_123101.csv
 │   └── csv_error_20231114_123151.csv
