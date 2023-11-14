@@ -11,38 +11,38 @@ csv_error <- data.frame()
 
 for (dataset in datasets$n){
   print(paste0("Working on: ", datasets$Title.Identifier..if.no.DOI.available.[dataset]))
-  error = FALSE
+  error_bool = FALSE
   
-  if(is.null(datasets$Abstract[dataset])){# where there is no abstract
+  if(datasets$Abstract[dataset] == ""){# where there is no abstract
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
       title = datasets$Title.Identifier..if.no.DOI.available.[dataset],
-      abstract = 'missing abstract',
+      error = 'missing abstract',
       contact = datasets$Producer[dataset],
       error_level = 'error'
     )
-    error = TRUE
+    error_bool = TRUE
     csv_error <- rbind(csv_error, error)
   }
-  if (datasets$Producer[dataset] %in% c("MUNDIALIS", "ERGO")){# we harvest them
+  if (datasets$Producer[dataset] %in% c("mundialis", "ERGO")){# we harvest them
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
       title = datasets$Title.Identifier..if.no.DOI.available.[dataset],
-      producer = 'already harvested',
+      error = 'already harvested',
       contact = datasets$Producer[dataset],
       error_level = 'error'
     )
-    error = TRUE
+    error_bool = TRUE
     csv_error <- rbind(csv_error, error)
   }
-  if (is.null(datasets$Link..html..to.an.image.logo.figure.representing.the.database[dataset])){
+  if (datasets$Link..html..to.an.image.logo.figure.representing.the.database[dataset] == ""){
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
       title = datasets$Title.Identifier..if.no.DOI.available.[dataset],
-      thumbnail = 'missing thumbnail',
+      error = 'missing thumbnail',
       contact = datasets$Producer[dataset],
       error_level = 'warning'
     )
@@ -50,7 +50,7 @@ for (dataset in datasets$n){
   }
   
   
-  if(error == FALSE){ #skip when error
+  if(error_bool == FALSE){ #skip when error
     metadata_id <- datasets$uuid[dataset]
     
     ##Création métadonnée
@@ -158,3 +158,6 @@ for (dataset in datasets$n){
   }
   
 }
+current_datetime <- format(Sys.time(), "%Y%m%d_%H%M%S")
+filename <- paste0("logs/csv_error_", current_datetime, ".csv")
+write.csv(csv_error, filename, row.names = FALSE)
