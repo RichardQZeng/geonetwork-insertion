@@ -13,7 +13,7 @@ for (dataset in datasets$n){
   print(paste0("Working on: ", datasets$Title.Identifier..if.no.DOI.available.[dataset]))
   error_bool = FALSE
   
-  if(datasets$Abstract[dataset] == ""){# where there is no abstract
+  if(datasets$Description.of.the.dataset[dataset] == ""){# where there is no abstract
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
@@ -65,7 +65,7 @@ for (dataset in datasets$n){
     
     ##Creation identification
     ident <- ISODataIdentification$new()
-    ident$setAbstract(paste(datasets$Abstract[dataset]))
+    ident$setAbstract(paste(datasets$Description.of.the.dataset[dataset]))
     ident$setLanguage("eng")
     ident$addTopicCategory("health")
 

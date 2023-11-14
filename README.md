@@ -39,10 +39,12 @@ The XLS file shared has to be formatted to make it easy to parse it. Here are th
 
 ### 2. Building the R execution environment
 * Dependencies System libs:
+
 ```shell
 sudo apt-get install libssl-dev libxml2-dev
 ```
 * Dependencies System lib related to R software:
+
 ```shell
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb [arch=amd64,i386] https://cran.rstudio.com/bin/linux/ubuntu xenial/'
@@ -50,13 +52,13 @@ sudo apt-get install r-base
 ```
 * R addiotional libs:
 	(see https://github.com/eblondel/geonapi/wiki#install_guide, https://github.com/eblondel/geometa/wiki#install_guide)
+
 ```R
 install.packages("devtools")
 install.packages("XML")
 install.packages("uuid")
 require("devtools")
 install_github("eblondel/geometa")
-install_github("eblondel/geonapi")
 ```
 
 ### 3. Executing the R script
