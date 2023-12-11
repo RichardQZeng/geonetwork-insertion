@@ -25,7 +25,7 @@ for (dataset in datasets$n){
     error_bool = TRUE
     csv_error <- rbind(csv_error, error)
   }
-  if (datasets$Producer[dataset] %in% c("mundialis", "ERGO")){# we harvest them
+  if (datasets$Producer[dataset] %in% c("mundialis")){# we harvest them
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
@@ -73,6 +73,9 @@ for (dataset in datasets$n){
     ### General Keywords
     dynamic_keywords <- ISOKeywords$new()
     for (kw in unlist(strsplit(paste(datasets$datasets$Database.Key.words[dataset]), ", "))){
+      dynamic_keywords$addKeyword(kw)
+    }
+    for (kw in unlist(strsplit(paste(datasets$datasets$Usefull.for.which.diseases[dataset]), ", "))){
       dynamic_keywords$addKeyword(kw)
     }
     ident$addKeywords(dynamic_keywords)
