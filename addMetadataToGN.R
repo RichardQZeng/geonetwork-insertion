@@ -47,9 +47,6 @@ for (dataset in datasets$n){
       error_level = 'warning'
     )
     csv_error <- rbind(csv_error, error)
-    if (datasets$Producer[dataset] == "ERGO"){
-      datasets$Link..html..to.an.image.logo.figure.representing.the.database[dataset] = "https://gitlab.irstea.fr/umr-tetis/mood/geonetwork-insertion/-/raw/master/readme.img/ergo.png"
-    }
   }
   
   
