@@ -61,7 +61,8 @@ for (dataset in datasets$n){
     md$setMetadataStandardName("ISO 19115:2003/19139")
     md$setLanguage("eng")
     md$setDateStamp(Sys.time())
-    md$setHierarchyLevel("dataset")
+    # md$setHierarchyLevel("dataset")
+    md$setHierarchyLevel(paste(datasets$dataset.or.software[dataset]))
     
     ##Creation identification
     ident <- ISODataIdentification$new()
@@ -72,10 +73,10 @@ for (dataset in datasets$n){
     ## keywords
     ### General Keywords
     dynamic_keywords <- ISOKeywords$new()
-    for (kw in unlist(strsplit(paste(datasets$datasets$Database.Key.words[dataset]), ", "))){
+    for (kw in unlist(strsplit(paste(datasets$Database.Key.words[dataset]), ", "))){
       dynamic_keywords$addKeyword(kw)
     }
-    for (kw in unlist(strsplit(paste(datasets$datasets$Usefull.for.which.diseases[dataset]), ", "))){
+    for (kw in unlist(strsplit(paste(datasets$Usefull.for.which.diseases[dataset]), ", "))){
       dynamic_keywords$addKeyword(kw)
     }
     ident$addKeywords(dynamic_keywords)
