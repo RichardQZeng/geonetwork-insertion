@@ -13,7 +13,7 @@ for (dataset in datasets$n){
   print(paste0("Working on: ", datasets$Title.Identifier..if.no.DOI.available.[dataset]))
   error_bool = FALSE
   
-  if(datasets$Description.of.the.dataset[dataset] == ""){# where there is no abstract
+  if(datasets$Description.of.the.dataset.Abstract[dataset] == ""){# where there is no abstract
     error <- data.frame(
       n = dataset,
       uuid = datasets$uuid[dataset],
@@ -62,13 +62,18 @@ for (dataset in datasets$n){
     md$setLanguage("eng")
     md$setDateStamp(Sys.time())
     # md$setHierarchyLevel("dataset")
-    md$setHierarchyLevel(paste(datasets$dataset.or.software[dataset]))
+    md$setHierarchyLevel(paste(datasets$Dataset.or.Software[dataset]))
     
     ##Creation identification
     ident <- ISODataIdentification$new()
-    ident$setAbstract(paste(datasets$Description.of.the.dataset[dataset]))
+    ident$setAbstract(paste(datasets$Description.of.the.dataset.Abstract[dataset]))
     ident$setLanguage("eng")
-    ident$addTopicCategory("health")
+    if (datasets$Producer[dataset] %in% c("ERGO")){
+      ident$addTopicCategory("environment")
+    }
+    else {# disease data
+      ident$addTopicCategory("health") 
+    }
 
     ## keywords
     ### General Keywords
