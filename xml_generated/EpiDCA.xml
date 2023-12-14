@@ -1,6 +1,6 @@
 <gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gfc="http://www.isotc211.org/2005/gfc" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:gmlrgrid="http://www.opengis.net/gml/3.3/rgrid" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <gmd:fileIdentifier>
-    <gco:CharacterString>c4702d92-80b3-11ee-b962-0242ac120121</gco:CharacterString>
+    <gco:CharacterString/>
   </gmd:fileIdentifier>
   <gmd:language>
     <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" codeSpace="ISO 639-2">English</gmd:LanguageCode>
@@ -9,10 +9,10 @@
     <gmd:MD_CharacterSetCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8">utf8</gmd:MD_CharacterSetCode>
   </gmd:characterSet>
   <gmd:hierarchyLevel>
-    <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="Dataset" codeSpace="ISOTC211/19115">Dataset</gmd:MD_ScopeCode>
+    <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="Software" codeSpace="ISOTC211/19115">Software</gmd:MD_ScopeCode>
   </gmd:hierarchyLevel>
   <gmd:dateStamp>
-    <gco:DateTime>2023-12-14T11:39:31</gco:DateTime>
+    <gco:DateTime>2023-12-14T11:39:36</gco:DateTime>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
     <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
@@ -22,7 +22,7 @@
       <gmd:citation>
         <gmd:CI_Citation>
           <gmd:title>
-            <gco:CharacterString>Supplementary Video 2 from Impact of contact data resolution on the evaluation of interventions in mathematical models of infectious diseases</gco:CharacterString>
+            <gco:CharacterString>EpiDCA</gco:CharacterString>
           </gmd:title>
           <gmd:identifier>
             <gmd:MD_Identifier/>
@@ -30,41 +30,37 @@
         </gmd:CI_Citation>
       </gmd:citation>
       <gmd:abstract>
-        <gco:CharacterString>Sketch of one simulation of a spread in the office data set, for R0=3 and the weekly testing protocol with adherence 75%, for the dynamical network (left panels), heterogeneous network (middle panels) and contact matrix of distributions (right panel) representations. The nodes representing individuals are arranged according to their department and colored according to their disease compartment. The time is discretized in timesteps of 15 minutes, with contacts changing at every time step for the dynamical network representation, and from day to day in the contact matrix of distributions representation. Links are highlighted in red when a contagion event occurs. No contacts occur outside of office hours. The bottom panels show the evolution over time of the nodes in each compartment (putting together the prodromic, subclinical and clinical compartments for simplicity).</gco:CharacterString>
+        <gco:CharacterString>EpiDCA is a generic method that aims to link epidemiological data extracted from EBS systems with their associated environmental risks factors, in order to classify the textual data detected by EBS  systems according to their relevance and timely detect outrbeak events</gco:CharacterString>
       </gmd:abstract>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
           <gmd:organisationName>
-            <gco:CharacterString>INSERM</gco:CharacterString>
+            <gco:CharacterString>INRAE</gco:CharacterString>
           </gmd:organisationName>
           <gmd:role>
             <gmd:CI_RoleCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" codeListValue="principalInvestigator" codeSpace="ISOTC211/19115">principalInvestigator</gmd:CI_RoleCode>
           </gmd:role>
         </gmd:CI_ResponsibleParty>
       </gmd:pointOfContact>
-      <gmd:graphicOverview>
-        <gmd:MD_BrowseGraphic>
-          <gmd:fileName>
-            <gco:CharacterString>https://www.inserm.fr/wp-content/uploads/2021/01/logo-inserm.svg</gco:CharacterString>
-          </gmd:fileName>
-          <gmd:fileDescription>
-            <gco:CharacterString>thumbnail</gco:CharacterString>
-          </gmd:fileDescription>
-          <gmd:fileType>
-            <gco:CharacterString>image/png</gco:CharacterString>
-          </gmd:fileType>
-        </gmd:MD_BrowseGraphic>
-      </gmd:graphicOverview>
       <gmd:descriptiveKeywords>
-        <gmd:MD_Keywords/>
+        <gmd:MD_Keywords>
+          <gmd:keyword>
+            <gco:CharacterString>text-mining</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>risk mapping </gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>Avian Influenza</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>African Swine Fever</gco:CharacterString>
+          </gmd:keyword>
+          <gmd:keyword>
+            <gco:CharacterString>West Nile Disease</gco:CharacterString>
+          </gmd:keyword>
+        </gmd:MD_Keywords>
       </gmd:descriptiveKeywords>
-      <gmd:resourceConstraints>
-        <gmd:MD_LegalConstraints>
-          <gmd:useLimitation>
-            <gco:CharacterString>cc4.0</gco:CharacterString>
-          </gmd:useLimitation>
-        </gmd:MD_LegalConstraints>
-      </gmd:resourceConstraints>
       <gmd:language>
         <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" codeSpace="ISO 639-2">English</gmd:LanguageCode>
       </gmd:language>
@@ -83,7 +79,7 @@
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>http://dx.doi.org/10.6084/m9.figshare.20043291.v1</gmd:URL>
+                <gmd:URL/>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -96,7 +92,7 @@
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL/>
+                <gmd:URL>https://github.com/BBahdja/EpiDCA</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -109,7 +105,7 @@
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>http://dx.doi.org/https://doi.org/10.1098/rsif.2022.0165</gmd:URL>
+                <gmd:URL/>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -123,7 +119,7 @@
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-  <!--Metadata Creation date/time: 2023-12-14T11:39:31-->
+  <!--Metadata Creation date/time: 2023-12-14T11:39:37-->
   <!--ISO 19139 XML generated by geometa R package - Version 0.6-2-->
   <!--ISO 19139 XML compliance: NO-->
   <!--geometa R package information:	Contact: Emmanuel Blondel emmanuel.blondel1@gmail.com	URL: https://github.com/eblondel/geometa/wiki	BugReports: https://github.com/eblondel/geometa/issues-->
