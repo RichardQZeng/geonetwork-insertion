@@ -84,6 +84,9 @@ for (dataset in datasets$n){
     for (kw in unlist(strsplit(paste(datasets$Usefull.for.which.diseases[dataset]), ", "))){
       dynamic_keywords$addKeyword(kw)
     }
+    for (kw in unlist(strsplit(paste(datasets$Dataset.type[dataset]), ", "))){
+      dynamic_keywords$addKeyword(kw)
+    }
     ident$addKeywords(dynamic_keywords)
   
     # add links data access
