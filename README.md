@@ -37,8 +37,9 @@ The aim of this project is to :
 The XLS file shared has to be formatted to make it easy to parse it. Here are the actions:
 
 1. Export a csv file
-2. Remove the 3 first rows (header)
-3. Add **n**, and **UUID** Columns
+2. Remove the 2 first rows (header)
+3. Remove lines corresponding to Mundialis since their datasets are already harvested from their GeoNetwork
+4. Add **n**, and **UUID** Columns
 
 ### 2. Building the R execution environment
 * Dependencies System libs:

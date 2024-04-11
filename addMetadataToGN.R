@@ -62,7 +62,7 @@ for (dataset in datasets$n){
     md$setLanguage("eng")
     md$setDateStamp(Sys.time())
     # md$setHierarchyLevel("dataset")
-    md$setHierarchyLevel(paste(datasets$Dataset.or.Software[dataset]))
+    md$setHierarchyLevel(tolower(paste(datasets$Dataset.or.Software[dataset])))
     
     ##Creation identification
     ident <- ISODataIdentification$new()
