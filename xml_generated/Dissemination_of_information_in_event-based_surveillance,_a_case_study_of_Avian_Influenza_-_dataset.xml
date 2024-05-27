@@ -1,6 +1,6 @@
 <gmd:MD_Metadata xmlns:gco="http://www.isotc211.org/2005/gco" xmlns:gfc="http://www.isotc211.org/2005/gfc" xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmi="http://standards.iso.org/iso/19115/-2/gmi/1.0" xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:srv="http://www.isotc211.org/2005/srv" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:gmlcov="http://www.opengis.net/gmlcov/1.0" xmlns:gmlrgrid="http://www.opengis.net/gml/3.3/rgrid" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <gmd:fileIdentifier>
-    <gco:CharacterString>c4702d92-80b3-11ee-b962-0242ac120068</gco:CharacterString>
+    <gco:CharacterString>c4702d92-80b3-11ee-b962-0242ac120058</gco:CharacterString>
   </gmd:fileIdentifier>
   <gmd:language>
     <gmd:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" codeSpace="ISO 639-2">English</gmd:LanguageCode>
@@ -12,7 +12,7 @@
     <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
   </gmd:hierarchyLevel>
   <gmd:dateStamp>
-    <gco:DateTime>2024-05-10T08:06:16</gco:DateTime>
+    <gco:DateTime>2024-05-27T10:53:37</gco:DateTime>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
     <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
@@ -30,13 +30,11 @@
         </gmd:CI_Citation>
       </gmd:citation>
       <gmd:abstract>
-        <gco:CharacterString>This dataset contains a set of tables corresponding to the manual analysis of outbreak-related reports detected by two event-based surveillance tools, PADI-web and HealthMap, supporting the submitted article "Dissemination of information in event-based surveillance, a case study of Avian Influenza".
-
-The reports were published between 1 July 2018 and 30st June 2019 and described one or several avian influenza outbreaks.  We collected 337 reports from PADI-web and 115 from HealthMap. Two epidemiologists identified all the reported events in the news, and classified them as official (notified to the World Organization for Animal Health) or non-official.
-
-In order to trace back the source of the event’s information, the epidemiologist manually traced the information pathway of all events mentioned in the PADI-web and HealthMap news. The pathway was deducted from the sources cited in the news. When a source was cited with a hyperlink, we followed the hyperlink to retrace the information pathway as far as possible to the primary source. For each cited source, we created a pair of emitter SE and receptor sources SR. We labelled each new source with its type (e.g. online news source, national veterinary authority, etc.). We also recorded their geographical focus (local, national or international) and their specialization in the animal health news coverage (general or specialized).
-
-The script for data analyses is available at https://github.com/SarahVal/EBS-network.</gco:CharacterString>
+        <gco:CharacterString>These datasets contain a set of news articles in English, French and Spanish extracted from Medisys (i.e. advanced search) according the following criteria:
+(1) Keywords (at least): COVID-19, ncov2019, cov2019, coronavirus;
+(2) Keywords (all words): masque (French), mask (English), máscara (Spanish)
+(3) Periods: March 2020, May 2020, July 2020;
+(4) Countries: UK (English), Spain (Spanish), France (French). </gco:CharacterString>
       </gmd:abstract>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
@@ -48,23 +46,10 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
           </gmd:role>
         </gmd:CI_ResponsibleParty>
       </gmd:pointOfContact>
-      <gmd:graphicOverview>
-        <gmd:MD_BrowseGraphic>
-          <gmd:fileName>
-            <gco:CharacterString>Not on the publication page</gco:CharacterString>
-          </gmd:fileName>
-          <gmd:fileDescription>
-            <gco:CharacterString>thumbnail</gco:CharacterString>
-          </gmd:fileDescription>
-          <gmd:fileType>
-            <gco:CharacterString>image/png</gco:CharacterString>
-          </gmd:fileType>
-        </gmd:MD_BrowseGraphic>
-      </gmd:graphicOverview>
       <gmd:descriptiveKeywords>
         <gmd:MD_Keywords>
           <gmd:keyword>
-            <gco:CharacterString>HPAI</gco:CharacterString>
+            <gco:CharacterString>COVID-19</gco:CharacterString>
           </gmd:keyword>
           <gmd:keyword>
             <gco:CharacterString>Disease data</gco:CharacterString>
@@ -74,7 +59,7 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
       <gmd:resourceConstraints>
         <gmd:MD_LegalConstraints>
           <gmd:useLimitation>
-            <gco:CharacterString>CC40</gco:CharacterString>
+            <gco:CharacterString>CC4.0</gco:CharacterString>
           </gmd:useLimitation>
         </gmd:MD_LegalConstraints>
       </gmd:resourceConstraints>
@@ -96,7 +81,7 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://doi.org/10.5281/zenodo.7324144</gmd:URL>
+                <gmd:URL>https://dataverse.cirad.fr/dataset.xhtml?persistentId=doi:10.18167/DVN1/ZUA8MF</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -109,7 +94,7 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL/>
+                <gmd:URL>N/A</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -122,7 +107,7 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>N/A</gmd:URL>
+                <gmd:URL>https://doi.org/10.1016/j.dib.2020.106356</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -136,7 +121,7 @@ The script for data analyses is available at https://github.com/SarahVal/EBS-net
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-  <!--Metadata Creation date/time: 2024-05-10T08:06:16-->
+  <!--Metadata Creation date/time: 2024-05-27T10:53:38-->
   <!--ISO 19139 XML generated by geometa R package - Version 0.6-2-->
   <!--ISO 19139 XML compliance: NO-->
   <!--geometa R package information:	Contact: Emmanuel Blondel emmanuel.blondel1@gmail.com	URL: https://github.com/eblondel/geometa/wiki	BugReports: https://github.com/eblondel/geometa/issues-->
