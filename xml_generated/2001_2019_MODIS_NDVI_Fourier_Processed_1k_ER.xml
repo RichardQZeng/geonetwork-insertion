@@ -12,7 +12,7 @@
     <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
   </gmd:hierarchyLevel>
   <gmd:dateStamp>
-    <gco:DateTime>2024-05-29T17:10:40</gco:DateTime>
+    <gco:DateTime>2024-08-28T16:32:26</gco:DateTime>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
     <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
@@ -30,46 +30,82 @@
         </gmd:CI_Citation>
       </gmd:citation>
       <gmd:abstract>
-        <gco:CharacterString>This is a set of images produced by temporal Fourier analysis of global MODIS data for Normalised Difference Vegetation Index (NDVI) derived from the MOD13A2 Product from USGS. The imagery summarises a key environmental indicators, incorporating seasonal dynamics, for the MOOD study area.
- MODIS is a sensor on board two NASA satellites, providing near-daily coverage of the entire Earth. The MOD13A2 product contains an 16-day average of NDVI at 1-kilometre resolution. Reflectance values have been adjusted to remove the distortion caused by view angle and land surface texture. 
-
-Abstract: the Index values were extracted from MOD13A2 files for the years 2001 through to 2019, and then processed by a temporal Fourier processing algorithm. A stepwise system of thresholds and interpolations screened erroneous values and bridged gaps in the time series. The smoothed series was sampled at 5-day intervals and transformed into a set of sine curves describing annual, bi-annual, and tri-annual fluctuations. For each of these curves, the Fourier algorithm generated images expressing the amplitude, phase, and variance. Other output recorded the mean, minimum, and maximum of the time series, and error measured during the Fourier transform. For a detailed descripton of the Fourier algorithm and its output, please see the article by Scharlemann et al., 2008 (https://doi.org/10.1371/journal.pone.0001408)
- Sea pixels were masked with a MODIS land/sea layer and the images were projected from sinusoidal to geographic. The MOOD study region was subset from global images. Idrisi rasters were converted to geotiff format in order to give data users more flexibility
+        <gco:CharacterString>Overview:
  
- File Names:
- The MO at the start of each file name indicates that the image covers the wider Europe and North Africa region included in the MOOD study area and is in geographic projection. 19 refers to the year timeline of 2001-2019.
+ This is a set of images produced by Temporal Fourier Analysis of global MODIS data
  
- The next two characters identify the channel:
- 03 - middle infra-red
- 07 - daytime land surface temperature
- 08 - nighttime land surface temperature
- 14 - NDVI: Normalised Difference Vegetation Index
- 15 - EVI: Enhanced Vegetation Index
+ NDVI: Normalised Difference Vegetation Index
+  
  
- The last two characters of each file name denote the output from Fourier processing:
- a0 - mean
- mn - minimum
- mx - maximum
- a1 - amplitude of annual cycle
- a2 - amplitude of bi-annual cycle
- a3 - amplitude of tri-annual cycle
- p1 - phase of annual cycle
- p2 - phase of bi-annual cycle
- p3 - phase of tri-annual cycle
- d1 - variance in annual cycle
- d2 - variance in bi-annual cycle
- d3 - variance in tri-annual cycle
- da - combined variance in annual, bi-annual, and tri-annual cycles
- vr - variance in raw data
+ Abstract:
+ 
+ MODIS is a sensor on board two NASA satellites, providing near-daily coverage of the entire Earth. The MOD11A2 product contains an 8-day average of land surface temperature at 1-kilometre resolution. Reflectance values have been adjusted to remove the distortion caused by the view angle and land surface texture. The MOD13A2 Product used for NDVI, EVI, and Middle Infra-red from USGS. The imagery summarises key environmental indicators, incorporating seasonal dynamics, for the MOOD study area.
+ 
+ This is the original version of the 2001-2019 series, which was then processed by a temporal Fourier processing algorithm.
+ 
+ A stepwise system of thresholds and interpolations screened erroneous values and bridged gaps in the time series. The smoothed series was sampled at 5-day intervals and transformed into a set of sine curves describing annual, bi-annual, and tri-annual fluctuations. For each of these curves, the Fourier algorithm generated images expressing the amplitude, phase, and variance. Other outputs recorded the mean, minimum, and maximum of the time series, and error measured during the Fourier transform. For a detailed description of the Fourier algorithm and its output, please see the article by Scharlemann et al., 2008 (https://doi.org/10.1371/journal.pone.0001408)
+  Sea pixels were masked with a MODIS land/sea layer and the images were projected from sinusoidal to geographic. The MOOD study region was a subset of global images. Idrisi rasters were converted to Geotiff format to give data users more flexibility
+  
+ 
+ File naming scheme:
+ 
+ 
+  The er at the start of each file name indicates that the image covers the wider Europe and North Africa region included in the MOOD study area and is in geographic projection. 19 refers to the year timeline of 2001-2019.
+  
+  The next two characters identify the channel:
+  03 - middle infra-red
+  07 - daytime land surface temperature
+  08 - nighttime land surface temperature
+  14 - NDVI: Normalised Difference Vegetation Index
+  15 - EVI: Enhanced Vegetation Index
+  
+  The last two characters of each file name denote the output from Fourier processing:
+  a0 - mean
+  mn - minimum
+  mx - maximum
+  a1 - amplitude of annual cycle
+  a2 - amplitude of bi-annual cycle
+  a3 - amplitude of tri-annual cycle
+  p1 - phase of annual cycle
+  p2 - phase of bi-annual cycle
+  p3 - phase of tri-annual cycle
+  d1 - variance in annual cycle
+  d2 - variance in bi-annual cycle
+  d3 - variance in tri-annual cycle
+  da - combined variance in annual, bi-annual, and tri-annual cycles
+  vr - variance in raw data
+ 
+ 
+ Projection + EPSG code:
+ Latitude-Longitude/WGS84 (EPSG: 4326)
+ Spatial extent:
+ Extent -32.0000000000000000,10.0000000000000000 : 68.9999999999999574,81.9999999999999716
+ Spatial resolution:
+ 0.0083333 deg (approx. 1000 m) 
+ Temporal resolution:
+  8-day and 16-day from 2001 to 2019
+ 
+ 
+ Pixel values
  
  Parameter Fourier Variable Image values are
  MIR (03) A0, A1, A2, A3, Min, Max, Vr Reflectance values * 10000
  LST (07 day,08 night) A0, A1, A2, A3, Min, Max, Vr (Degrees Centigrade+273)*50
- NDVI (14) and EVI (15) A0, A1, A2, A3, Index Value * 10000
+ NDVI (14) and EVI (15) A0, A1, A2, A3, Index Value * 1000
+ NDVI (14) and EVI (15) A0, Min, Max, Index Value * 1000 + 10000
  NDVI (14) and EVI (15) VR Value * 10000
  ALL D1,D2,D3,Da Percentages
  ALL E1,E2,E3 Percentages
- ALL P1,P2.P3 Months*100. (Jan=100"</gco:CharacterString>
+ ALL P1,P2.P3 Months*100. (Jan=100)
+ 
+ 
+ Source: 
+ MODIS NASA :MOD11A2 and MOD13A2
+ 
+ 
+ Software used:
+ Codes for modelling are in Python and C++
+ The software used for map production is ESRI ArcMap 10.8</gco:CharacterString>
       </gmd:abstract>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
@@ -136,7 +172,7 @@ Abstract: the Index values were extracted from MOD13A2 files for the years 2001 
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://tinyurl.com/tfamodis01191k</gmd:URL>
+                <gmd:URL>https://doi.org/10.5281/zenodo.13134567</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -176,7 +212,7 @@ Abstract: the Index values were extracted from MOD13A2 files for the years 2001 
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-  <!--Metadata Creation date/time: 2024-05-29T17:10:40-->
+  <!--Metadata Creation date/time: 2024-08-28T16:32:27-->
   <!--ISO 19139 XML generated by geometa R package - Version 0.6-2-->
   <!--ISO 19139 XML compliance: NO-->
   <!--geometa R package information:	Contact: Emmanuel Blondel emmanuel.blondel1@gmail.com	URL: https://github.com/eblondel/geometa/wiki	BugReports: https://github.com/eblondel/geometa/issues-->

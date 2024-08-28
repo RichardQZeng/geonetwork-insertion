@@ -12,7 +12,7 @@
     <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
   </gmd:hierarchyLevel>
   <gmd:dateStamp>
-    <gco:DateTime>2024-05-29T17:10:47</gco:DateTime>
+    <gco:DateTime>2024-08-28T16:32:31</gco:DateTime>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
     <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
@@ -30,16 +30,28 @@
         </gmd:CI_Citation>
       </gmd:citation>
       <gmd:abstract>
-        <gco:CharacterString>This is a set of images produced by temporal Fourier analysis of global VIIRS data 08 - NLST: Night-time Land Surface Temperature derived from the VNP21A2 Product from USGS. The imagery summarises a key environmental indicators, incorporating seasonal dynamics, for the MOOD study area.
- VIIRS is a sensor on board two NASA satellites, providing near-daily coverage of the entire Earth. The VNP21A2 product contains an 8-day average of land surface temperature at 1-kilometre resolution. Reflectance values have been adjusted to remove the distortion caused by view angle and land surface texture. 
-
-Abstract: Temperatures were extracted from VNP21A2 files for the years 2012 through to 2020, and then processed by a temporal Fourier processing algorithm. A stepwise system of thresholds and interpolations screened erroneous values and bridged gaps in the time series. The smoothed series was sampled at 5-day intervals and transformed into a set of sine curves describing annual, bi-annual, and tri-annual fluctuations. For each of these curves, the Fourier algorithm generated images expressing the amplitude, phase, and variance. Other output recorded the mean, minimum, and maximum of the time series, and error measured during the Fourier transform. For a detailed descripton of the Fourier algorithm and its output, please see the article by Scharlemann et al., 2008 (https://doi.org/10.1371/journal.pone.0001408)
- Sea pixels were masked with a MODIS land/sea layer and the images were projected from sinusoidal to geographic. The MOOD study region was subset from global images. Idrisi rasters were converted to geotiff format in order to give data users more flexibility
+        <gco:CharacterString>Overview:
+ This is a set of images produced by Temporal Fourier Analysis (TFA) of VIIRS data:
  
- File Names:
- The ER at the start of each file name indicates that the image covers the wider Europe and North Africa region included in the MOOD study area and is in geographic projection. 20 refers to the year timeline of 2012-2020.
+ NLST: Night-time Land Surface Temperature
+ 
+ The imagery summarises some key environmental indicators, incorporating seasonal dynamics, for The European and North African extent.
+ This series of VIIRS data has been updated to include imagery from 2012 to 2020. 
+ 
   
- 19 referes to he code give to PrecipitationThe next two characters identify the channel:
+ 
+ Abstract:
+ Image values were extracted from VIRRS imagery from 2012 to 2020. The day and night land temperature came from the 8-day VNP21A2 data whilst the vegetation indices and Middle Infra Red values were extracted from the VNP13A2, 16-day datasets. Each parameter extract dataset was then processed by a temporal Fourier processing algorithm. A stepwise system of thresholds and interpolations screened erroneous values and bridged gaps in the time series. The smoothed series was sampled at 5-day intervals and transformed into a set of sine curves describing annual, bi-annual, and tri-annual fluctuations. For each of these curves, the Fourier algorithm generated images expressing the amplitude, phase, and variance. Other outputs recorded the mean, minimum, and maximum of the time series, and error measured during the Fourier transform. For a detailed description of the Fourier algorithm and its output, please see the article by Scharlemann et al., 2008 (https://doi.org/10.1371/journal.pone.0001408)
+ Sea pixels were masked with a VIIRS land/sea layer and the images were projected from sinusoidal to geographic. The MOOD study region was a subset of global images. Idrisi rasters were converted to GeoTIFF format to give data users more flexibility.
+ 
+ This new VIIRS Dataset is used as an update and continuation of our MODIS TFA product and can be utilised in the same way. 
+ 
+ File naming scheme: 
+ 
+ 
+ The er at the start of each file name indicates that the image covers the wider Europe and North Africa region included in the MOOD study area and is in geographic projection. 20 refers to the year timeline of 2012-2020.
+ 
+ The next two characters identify the channel:
  03 - middle infra-red
  07 - daytime land surface temperature
  08 - nighttime land surface temperature
@@ -62,6 +74,22 @@ Abstract: Temperatures were extracted from VNP21A2 files for the years 2012 thro
  da - combined variance in annual, bi-annual, and tri-annual cycles
  vr - variance in raw data
  
+ 
+ Files can be accessed here as well (including Global files). 
+ 
+  
+ Projection + EPSG code:
+ Latitude-Longitude/WGS84 (EPSG: 4326)
+ Spatial extent:
+ Extent -32.0000000000000000,10.0000000000000000 : 68.9999999999999574,81.9999999999999716
+ Spatial resolution:
+ 0.0083333 deg (approx. 1000 m) 
+ Temporal resolution:
+  8-day and 16-day for 2012 to 2020 
+ 
+ 
+ Pixel values
+ 
  Parameter Fourier Variable Image values are
  MIR (03) A0, A1, A2, A3, Min, Max, Vr Reflectance values * 10000
  LST (07 day,08 night) A0, A1, A2, A3, Min, Max, Vr (Degrees Centigrade+273)*50
@@ -70,7 +98,16 @@ Abstract: Temperatures were extracted from VNP21A2 files for the years 2012 thro
  NDVI (14) and EVI (15) VR Value * 10000
  ALL D1,D2,D3,Da Percentages
  ALL E1,E2,E3 Percentages
- ALL P1,P2.P3 Months*100. (Jan=100)</gco:CharacterString>
+ ALL P1,P2.P3 Months*100. (Jan=100)
+ 
+ 
+ Source: 
+  VIIRS NASA :VNP21A2 and VNP13A2
+ 
+ 
+ Software used:
+ Codes for modelling are in Python and C++
+ The software used for map production is ESRI ArcMap 10.8</gco:CharacterString>
       </gmd:abstract>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
@@ -137,7 +174,7 @@ Abstract: Temperatures were extracted from VNP21A2 files for the years 2012 thro
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://tinyurl.com/tfaviirs12201k</gmd:URL>
+                <gmd:URL>https://doi.org/10.5281/zenodo.12914013</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -177,7 +214,7 @@ Abstract: Temperatures were extracted from VNP21A2 files for the years 2012 thro
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-  <!--Metadata Creation date/time: 2024-05-29T17:10:47-->
+  <!--Metadata Creation date/time: 2024-08-28T16:32:31-->
   <!--ISO 19139 XML generated by geometa R package - Version 0.6-2-->
   <!--ISO 19139 XML compliance: NO-->
   <!--geometa R package information:	Contact: Emmanuel Blondel emmanuel.blondel1@gmail.com	URL: https://github.com/eblondel/geometa/wiki	BugReports: https://github.com/eblondel/geometa/issues-->

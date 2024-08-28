@@ -12,7 +12,7 @@
     <gmd:MD_ScopeCode codeList="http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MX_ScopeCode" codeListValue="dataset" codeSpace="ISOTC211/19115">dataset</gmd:MD_ScopeCode>
   </gmd:hierarchyLevel>
   <gmd:dateStamp>
-    <gco:DateTime>2024-05-29T17:10:49</gco:DateTime>
+    <gco:DateTime>2024-08-28T16:32:38</gco:DateTime>
   </gmd:dateStamp>
   <gmd:metadataStandardName>
     <gco:CharacterString>ISO 19115:2003/19139</gco:CharacterString>
@@ -31,11 +31,30 @@
       </gmd:citation>
       <gmd:abstract>
         <gco:CharacterString>Spatial Models CCHF vectors Hyalomma marginatum and Hyalomma lusitanicum 2022. 
-
-Abstract: Ensembled spatial models waer produced for CCHf vectors Hyalomma marginatum and and Hyalomma lusitanicum by combining Random Forest and Boosted Regresion Trees spatial modelling outputs, implemented using the VECMAP modelling suite, using a standard set of covariates including Fourier Processed Remotely Sensed environmental variables, land use proportions, human poplation and elevation. The training data offered to the model process include point location and polygon data from the VectorNet project (https://www.ecdc.europa.eu/en/about-us/partnerships-and-networks/disease-and-laboratory-networks/vector-net), and from the Global Biodiversity Information Facility (www.gbif.org) . 
- 
-  Four zippoed archives are provided : two for probability ((VNHYxxyyyyPROBJUL22 = unmasked, VNHYxxyyyyPROBMASKEDJUL22= masked with calculated environmental suitability, XX: LU=lusitanica, MA=marginatum; yyyy=mean of replicates, max=max value of replicates, min = minimum vale of replicates, std=standard deviation of replicates) and two for Presence absence (=&gt;0.5) (VNHYxxyyyyPAJUL22 = unmasked, VNHYxxyyyyPAMASKEDJUL22= masked with calculated environmental suitability, XX: LU=lusitanica, MA=marginatum; yyyy=mean of replicates, max=max value of replicates, min = minimum vale of replicates). 
- The work was a collaboration with ECDC and the vector distributionsproduced by MOOD were used to mask CCHF models to improve the predicted distribtions of the disease. The results are published in Messina JP, Wint GRW. The Spatial Distribution of Crimean-Congo Haemorrhagic Fever and Its Potential Vectors in Europe and Beyond. Insects. 2023 Sep 17;14(9):771. doi: 10.3390/insects14090771. PMID: 37754739; PMCID: PMC10532370.</gco:CharacterString>
+ Abstract: 
+ Ensembled spatial models were produced for CCHf vectors Hyalomma marginatum and Hyalomma lusitanicum by combining Random Forest and Boosted Regression Trees spatial modelling outputs, implemented using the VECMAP modelling suite, using a standard set of covariates including Fourier Processed Remotely Sensed environmental variables, land use proportions, human population and elevation. The training data offered to the model process include point location and polygon data from the VectorNet project (https://www.ecdc.europa.eu/en/about-us/partnerships-and-networks/disease-and-laboratory-networks/vector-net) and from the Global Biodiversity Information Facility (www.gbif.org). 
+  
+  
+ The work was a collaboration with ECDC and the vector distributions produced by MOOD were used to mask CCHF models to improve the predicted distributions of the disease. The results are published in Messina JP, Wint GRW. The Spatial Distribution of Crimean-Congo Haemorrhagic Fever and Its Potential Vectors in Europe and Beyond. Insects. 2023 Sep 17;14(9):771. doi: 10.3390/insects14090771. PMID: 37754739; PMCID: PMC10532370.
+  
+ File naming scheme: 
+ Four zipped archives are provided: two for probability ((VNHYxxyyyyPROBJUL22 = unmasked, VNHYxxyyyyPROBMASKEDJUL22= masked with calculated environmental suitability, XX: LU=lusitanica, MA=marginatum; yyyy=mean of replicates, max=max value of replicates, min = minimum value of replicates, std=standard deviation of replicates) and two for Presence absence (=&gt;0.5) (VNHYxxyyyyPAJUL22 = unmasked, VNHYxxyyyyPAMASKEDJUL22= masked with calculated environmental suitability, XX: LU=lusitanica, MA=marginatum; yyyy=mean of replicates, max=max value of replicates, min = minimum value of replicates). 
+  
+ Projection + EPSG code:
+ Latitude-Longitude/WGS84 (EPSG: 4326)
+ Spatial extent:
+ Extent -32.0000000000000000,18.0000000000000000 : 68.9999999999999574,81.9999999999999716
+ Spatial resolution:
+ 0.0083333 deg (approx. 1000 m) 
+ Temporal resolution:
+ Snapshot, using training data to 2022
+ Pixel values:
+  Cluster number and Predicted probability of presence
+ Source: 
+ point location and polygon data from the VectorNet project (https://www.ecdc.europa.eu/en/about-us/partnerships-and-networks/disease-and-laboratory-networks/vector-net), and from the Global Biodiversity Information Facility (www.gbif.org)
+ Software used:
+ The software used for modelling is VECMAP®
+ The software used for map production is ESRI ArcMap 10.8</gco:CharacterString>
       </gmd:abstract>
       <gmd:pointOfContact>
         <gmd:CI_ResponsibleParty>
@@ -108,7 +127,7 @@ Abstract: Ensembled spatial models waer produced for CCHf vectors Hyalomma margi
           <gmd:onLine>
             <gmd:CI_OnlineResource>
               <gmd:linkage>
-                <gmd:URL>https://tinyurl.com/SpatialModelHyalommaMI22</gmd:URL>
+                <gmd:URL>https://doi.org/10.5281/zenodo.12799382</gmd:URL>
               </gmd:linkage>
               <gmd:protocol>
                 <gco:CharacterString>WWW:LINK-1.0-http--link</gco:CharacterString>
@@ -148,7 +167,7 @@ Abstract: Ensembled spatial models waer produced for CCHf vectors Hyalomma margi
       </gmd:transferOptions>
     </gmd:MD_Distribution>
   </gmd:distributionInfo>
-  <!--Metadata Creation date/time: 2024-05-29T17:10:49-->
+  <!--Metadata Creation date/time: 2024-08-28T16:32:39-->
   <!--ISO 19139 XML generated by geometa R package - Version 0.6-2-->
   <!--ISO 19139 XML compliance: NO-->
   <!--geometa R package information:	Contact: Emmanuel Blondel emmanuel.blondel1@gmail.com	URL: https://github.com/eblondel/geometa/wiki	BugReports: https://github.com/eblondel/geometa/issues-->
