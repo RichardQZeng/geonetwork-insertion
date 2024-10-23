@@ -58,6 +58,7 @@ sudo apt-get install r-base
 	(see https://github.com/eblondel/geonapi/wiki#install_guide, https://github.com/eblondel/geometa/wiki#install_guide)
 
 ```R
+install.packages("geonapi")
 install.packages("devtools")
 install.packages("XML")
 install.packages("uuid")
